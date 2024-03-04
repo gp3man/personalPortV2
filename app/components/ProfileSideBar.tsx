@@ -1,9 +1,11 @@
+'use client'
 import React from "react";
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import { TbFoldDown } from "react-icons/tb";
-import BarIcon from "./BarIcon.jsx";
-import Me6 from "../../src/assets/Mymeme6.png";
-import I from "../../src/assets/img2.jpg";
+import BarIcon from "./BarIcon";
+import Me6 from "@/public/assets/Mymeme6.png";
+import I from "@/public/assets/img2.jpg";
+import Image from "next/image";
 const Profile = () => {
   const handleScroll = (evt) => {
     evt.preventDefault();
@@ -15,9 +17,9 @@ const Profile = () => {
       id="Profile"
       style={{ backgroundImage: `url(${I})` }}
     >
-      <img
+      <Image
         className="w-32 h-32 rounded-full animate- animate-bounce space-x-4 duration-1000"
-        src={Me6}
+        alt="meme" src={Me6}
       />
       <h1 className="mobi:text-2xl sm:text-4xl uppercase m-6 bg-gradient-to-t from-yellow-500 to-slate-100 bg-clip-text text-transparent shadow-2xl font-bold translate-y-5">
         Gregory Pounds

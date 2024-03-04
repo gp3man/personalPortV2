@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import BarIcon from "./BarIcon.tsx";
+import BarIcon from "./BarIcon";
 const ThemeController = () => {
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const userTheme = localStorage.getItem("theme");

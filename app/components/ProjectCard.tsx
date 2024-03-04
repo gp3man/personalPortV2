@@ -3,7 +3,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { TbExternalLink } from "react-icons/tb";
 import { DiGithubFull } from "react-icons/di";
 import { HiMiniPhoto } from "react-icons/hi2";
-import BarIcon from "./BarIcon.jsx";
+import BarIcon from "./BarIcon";
 const ProjectCard = ({ data }) => {
   const { screenshots, summary, name, link, github } = data;
   const [currentIndex, setCurrentIndex] = useState(0);

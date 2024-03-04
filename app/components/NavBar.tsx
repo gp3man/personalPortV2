@@ -1,8 +1,8 @@
 import React from "react";
-// import BarIcon from "./BarIcon.tsx";
+// import BarIcon from "./BarIcon";
 // import { LuDownload } from "react-icons/lu";
 // import resume from "@/public/assets/Resume.pdf";
-import ThemeController from "./ThemeSwitcher.tsx";
+import ThemeController from "./ThemeSwitcher";
 import Link from "next/link.js";
 const NavBar = () => {
   return (
@@ -32,13 +32,8 @@ const NavBar = () => {
         >
           <BarIcon icon={<LuDownload />} tooltip={"Resume"}></BarIcon>
         </a> */}
-        <ThemeController />
       </div>
     </section>
   );
-};
-const handleScroll = (evt) => {
-  evt.preventDefault();
-  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 };
 export default NavBar;

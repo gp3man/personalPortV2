@@ -1,5 +1,6 @@
+'use client'
 import React, { useEffect } from "react";
-import BarIcon from "./BarIcon.jsx";
+import BarIcon from "./BarIcon";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
@@ -20,7 +21,6 @@ const TechStack = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1 });
   useEffect(() => {
-    // console.log("TechPage, inView =", inView);
     if (inView) {
       animation.start({
         x: 0,
@@ -31,7 +31,7 @@ const TechStack = () => {
     if (!inView) {
       animation.start({ x: -150, opacity: 0 });
     }
-  }, [inView]);
+  }, [inView, animation]);
   return (
     <motion.section
       ref={ref}
